@@ -1,0 +1,589 @@
+:root {
+  --primary-color: #128d76;
+  --secondary-color: #e2e5f2;
+  --warning-color: rgb(233, 199, 4);
+  --light-color: #f8fffc;
+  --white-color: #fff;
+  --transition: all 0.3s ease-in-out;
+  --box-shadow: 0 0.5rem 1rem rgba(36, 36, 36, 0.1);
+  --border: 1px solid rgba(9, 9, 9, 0.1);
+
+  --succes-color-soft: rgba(18, 141, 118, 0.18);
+}
+
+/* General styles */
+* {
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+.border {
+  border: var(--border);
+}
+
+.shadow {
+  box-shadow: var(--box-shadow);
+}
+
+*::selection {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: #ffffff;
+  color: #454a4a;
+}
+
+html {
+  scroll-padding-top: -2rem;
+}
+
+section {
+  padding: 0 9%;
+  padding-top: 5rem;
+}
+
+.back-to-top-btn {
+  z-index: 9999;
+  bottom: 1rem;
+  right: 1rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.back-to-top-btn.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.btn {
+  text-transform: capitalize;
+}
+
+.btn:not(.btn-circle) {
+  transition: var(--transition);
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+h1,
+h2,
+h3 {
+  text-transform: capitalize;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  text-transform: capitalize;
+  transition: var(--transition);
+  position: relative;
+}
+
+a.active,
+a:hover {
+  color: var(--primary-color);
+}
+
+p {
+  font-size: var(--font-14);
+  opacity: 0.8;
+}
+
+/* ------------------------------------------Custom Styles-------------------------------------------- */
+
+/* ------------------------------------------Header-------------------------------------------- */
+header {
+  background-color: var(--secondary-color);
+  z-index: 999;
+  padding: 0.2rem 9%;
+}
+
+header .navbar a {
+  margin: 0 1.2rem;
+}
+
+header .navbar a::before {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 2px;
+  background-color: var(--primary-color);
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: var(--transition);
+}
+
+header .navbar a.active::before,
+header .navbar a:hover::before {
+  transform: scaleX(1);
+}
+
+header .toggle-btn {
+  display: none;
+}
+
+header .icon-list .count {
+  width: 1rem;
+  height: 1rem;
+  margin-top: -7px;
+}
+
+/* ----------------------------------------------------------------------------Home---------------------------------------------------------------------------- */
+/* Hero */
+section.hero {
+  min-height: 100vh;
+  background: url("../images/hero4.png") no-repeat;
+  background-size: cover;
+}
+
+section.hero .btn {
+  background: url("../images/button.png") no-repeat;
+  color: var(--primary-color);
+  border: none;
+  background-size: cover;
+  width: 10rem;
+}
+
+/* Features */
+section.features .btn {
+  margin: 1rem auto;
+}
+section.features .btn1 {
+  background-color: rgba(128, 0, 128, 0.15);
+  color: rgb(128, 0, 128);
+}
+section.features .btn2 {
+  background-color: rgba(37, 137, 0, 0.15);
+  color: rgb(37, 137, 0);
+}
+section.features .btn3 {
+  background-color: rgba(0, 94, 128, 0.15);
+  color: rgb(0, 94, 128);
+}
+section.features .btn4 {
+  background-color: rgba(128, 26, 0, 0.15);
+  color: rgb(128, 26, 0);
+}
+section.features .btn5 {
+  background-color: rgba(49, 0, 128, 0.15);
+  color: rgb(49, 0, 128);
+}
+section.features .btn6 {
+  background-color: rgba(147, 122, 0, 0.15);
+  color: rgb(147, 122, 0);
+}
+
+/* Featured */
+section.featured .product,
+section.new-arrival .product {
+  flex: 1 1 16rem;
+  overflow: hidden;
+}
+
+section .product p,
+section .product h1,
+section .product .rating {
+  margin-left: 0.7rem;
+}
+
+section .product .btn {
+  margin-right: 0.7rem;
+}
+
+/* Explore */
+section.explore {
+  background: url("../images/banner/b2.jpg") no-repeat;
+  background-size: cover;
+}
+
+section.explore .btn {
+  background-color: var(--light-color);
+  color: #454a4a;
+}
+
+/* Banner */
+.banner .top-banners .banner1,
+.banner .top-banners .banner2 {
+  flex: 1 1 30rem;
+  height: 25rem;
+}
+
+.banner .bottom-banners .banner1 {
+  grid-column: 1/3;
+}
+
+.banner .bottom-banners .banner2 {
+  grid-column: 3/6;
+}
+
+.banner .bottom-banners .banner3 {
+  grid-column: 6/8;
+}
+
+.banner .btn {
+  background-color: transparent;
+  border: 1px solid var(--light-color);
+  color: var(--light-color);
+}
+
+.banner .btn:hover {
+  transform: scale(1);
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+/* Newsletter */
+section.newsletter {
+  background-image: linear-gradient(
+      rgba(6, 7, 46, 0.832),
+      rgba(6, 7, 46, 0.832)
+    ),
+    url("../images/banner/b10.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+section.newsletter .info,
+section.newsletter form {
+  flex: 1 1 20rem;
+}
+
+section.newsletter .form-control,
+section.coupon-subtotal .form-control {
+  border-radius: 0;
+}
+
+section.newsletter .form-control,
+section.coupon-subtotal .form-control {
+  border-right: none;
+}
+
+section.newsletter .form-control:focus,
+section.coupon-subtotal .form-control:focus {
+  border: 1px solid var(--primary-color);
+  border-right: none;
+}
+
+section.newsletter .btn {
+  padding: 0.35rem 1rem;
+  width: 10rem;
+  border: 1px solid var(--primary-color);
+}
+
+section.newsletter .btn:hover,
+section.coupon-subtotal .btn:hover {
+  transform: scale(1);
+}
+
+/* Footer */
+footer {
+  padding: 2rem 9%;
+}
+
+footer .content .credits {
+  border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+}
+
+footer .content .box {
+  flex: 1 1 15rem;
+}
+
+footer .content .box a {
+  display: block;
+  margin-top: 1rem;
+  transition: var(--transition);
+}
+
+footer .content .box a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+/* ----------------------------------------------------------------------------Shop---------------------------------------------------------------------------- */
+section.shop-banner {
+  background: url("../images/banner/b1.jpg") no-repeat;
+  background-size: cover;
+}
+
+section.products .product {
+  flex: 1 1 16rem;
+  overflow: hidden;
+}
+
+/* ----------------------------------------------------------------------------Blog---------------------------------------------------------------------------- */
+section.blog-banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/banner/b19.jpg");
+  background-size: cover;
+}
+
+section.blogs .blog {
+  z-index: 0;
+}
+
+section.blogs .blog .image,
+section.blogs .blog .content,
+section.about .image,
+section.about .content,
+section.contact .content,
+section.contact .map,
+section.contact-form .form,
+section.contact-form .team {
+  flex: 1 1 20rem;
+}
+
+section.blogs .blog .content a::before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 50%;
+  background-color: #909292;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 1rem;
+}
+
+section.blogs .blog .content a:hover::before {
+  background-color: var(--primary-color);
+}
+
+section.blogs .blog .image img {
+  height: 22rem;
+}
+
+section.blogs .blog .number {
+  z-index: -1;
+  margin-top: -5.2rem;
+  margin-left: -1rem;
+}
+
+section.blogs .blog .number h1 {
+  font-size: 6rem;
+  font-family: "Roboto", sans-serif;
+}
+
+/* ----------------------------------------------------------------------------About---------------------------------------------------------------------------- */
+section.about-banner {
+  background: url("../images/about/banner.png") no-repeat;
+  background-size: cover;
+}
+
+/* ----------------------------------------------------------------------------Contact---------------------------------------------------------------------------- */
+section.contact-form .form {
+  flex: 1 1 30rem;
+}
+
+/* ----------------------------------------------------------------------------Single---------------------------------------------------------------------------- */
+section.single .images,
+section.single .content {
+  flex: 1 1 20rem;
+}
+
+section.single .images {
+  width: fit-content;
+}
+
+section.single .content .btn-primary-outlined:hover,
+section.single .content .btn-circle:hover {
+  transform: scale(1);
+}
+
+/* ----------------------------------------------------------------------------Cart---------------------------------------------------------------------------- */
+section.cart-banner {
+  background: url("../images/about/banner.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+section.cart .table-section {
+  max-width: 100%;
+}
+
+section.cart .table-section table th,
+section.cart .table-section table td {
+  padding-left: 2rem;
+}
+
+section.cart .table-section::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+section.cart .table-section::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 0.4rem;
+}
+
+section.coupon-subtotal .coupon,
+section.coupon-subtotal .subtotal {
+  flex: 1 1 20rem;
+}
+
+/*------------------------------------------------------------------------------ Media Queries---------------------------------------------------------------- */
+@media screen and (max-width: 1280px) {
+  section.hero {
+    background-position: bottom right;
+  }
+
+  section.hero .hero-text {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 1028px) {
+  section.hero {
+    background-position: bottom;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .banner .bottom-banners .banner1 {
+    grid-column: 1/4;
+    grid-row: 1/2;
+  }
+
+  .banner .bottom-banners .banner2 {
+    grid-column: 1/8;
+  }
+
+  .banner .bottom-banners .banner3 {
+    grid-column: 4/8;
+    grid-row: 1/2;
+  }
+
+  .banner .bottom-banners .banner2 h1 {
+    font-size: var(--font-30) !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 0.3rem 3%;
+  }
+
+  section,
+  footer {
+    padding: 2rem 4%;
+  }
+
+  header .toggle-btn {
+    display: flex;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--secondary-color);
+    width: 100%;
+    padding: 1rem 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow);
+    transform-origin: 0;
+    transform: translateY(-500px);
+    opacity: 0;
+    transition: var(--transition);
+  }
+
+  header .navbar a {
+    display: block;
+    margin: 1.5rem 0;
+  }
+
+  header .icon-list {
+    width: 100%;
+    text-align: right;
+    margin-right: 1rem;
+  }
+
+  header .navbar a.active::before,
+  header .navbar a:hover::before {
+    display: none;
+  }
+
+  header .navbar.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .hero h1 span {
+    color: #0bd6b1;
+  }
+
+  .opacity-5 {
+    opacity: 0.7;
+  }
+
+  .hero,
+  .features,
+  .newsletter,
+  .explore {
+    text-align: center;
+  }
+
+  section.hero {
+    background-position: bottom right;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../images/hero4.png");
+  }
+
+  section.hero .hero-text .btn {
+    margin: 1rem auto;
+    color: var(--light-color);
+  }
+
+  section.hero .hero-text {
+    color: var(--light-color);
+  }
+
+  .features {
+    padding-top: 0;
+  }
+
+  .features .features-grid {
+    margin-top: -5rem;
+  }
+
+  section.banner .btn,
+  section.contact-form .btn,
+  section.coupon-subtotal .btn {
+    margin: 1rem auto;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  section.features .btn {
+    font-size: 0.8rem;
+  }
+
+  .banner .bottom-banners {
+    grid-template-columns: 1fr;
+  }
+
+  .banner .bottom-banners .banner1,
+  .banner .bottom-banners .banner2,
+  .banner .bottom-banners .banner3 {
+    grid-column: 1/8;
+  }
+
+  .banner .bottom-banners .banner1 {
+    grid-row: 3;
+  }
+}

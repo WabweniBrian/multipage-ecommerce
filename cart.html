@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- My minified  CSS version link -->
+    <link rel="stylesheet" href="assets/css/simplified.css">
+    <!-- Custom CSS link -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Font Awesome link -->
+    <link rel="stylesheet" href="assets/fonts/css/all.css">
+
+    <!-- Feather icons link -->
+    <link rel="stylesheet" href="assets/feather-icons/feather.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+    <title>Eccomerce | Cart</title>
+</head>
+<body>
+    <!-- Bact to top nutton -->
+    <button class="btn btn-circle btn-primary shadow fixed right-none back-to-top-btn" id="backToTop"><i
+            class="fa fa-chevron-up"></i></button>
+
+    <!-------------------------Header------------------------------------ -->
+    <header class="fixed left-none top-none w-100 flex-center-between shadow">
+        <a href="index.html" class="logo">
+            <img src="assets/images/logo.png" alt="" class="image">
+        </a>
+        <nav class="navbar">
+            <a href="index.html">home</a>
+            <a href="shop.html">shop</a>
+            <a href="blog.html">blog</a>
+            <a href="about.html">about</a>
+            <a href="contact.html">contact</a>
+        </nav>
+        <div class="icon-list">
+            <a href="cart.html" class="ml-1" class="relative"><i class="feather-shopping-cart"> <span
+                        class="count danger-bg text-light absolute top-none right-none rounded-full grid place-center text-12">5</span></i></a>
+            <a href="#" class="ml-2"><i class="far fa-user"></i></a>
+        </div>
+        <div class="toggle-btn cursor-pointer">
+            <i class="fa fa-bars"></i>
+        </div>
+    </header>
+    <!-------------------------//Header------------------------------------ -->
+
+    <!-------------------------Main------------------------------------ -->
+    <main>
+
+        <!-------------------------Banner Section------------------------------------ -->
+        <section class="cart-banner">
+            <div class="flex-center-center flex-col pt-4 pb-8 text-light">
+                <h4 class="text-xl">#cart</h4>
+                <p class="mt-1">
+                    Add your coupon code $ SAVE up to 70% off
+                </p>
+            </div>
+        </section>
+        <!-------------------------//Banner Section------------------------------------ -->
+
+        <!-----------------------------------------cart---------------------------------- -->
+        <section class="cart">
+            <div class="table-section  mx-auto overflow-auto">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="uppercase">remove</th>
+                            <th class="uppercase">image</th>
+                            <th class="uppercase">product</th>
+                            <th class="uppercase">price</th>
+                            <th class="uppercase">quatity</th>
+                            <th class="uppercase">subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><i class="feather-delete cursor-pointer"></i></td>
+                            <td><img src="assets/images/products/f1.jpg" alt="" width="30"></td>
+                            <td class="capitalize">cartoon astranaut t-shirt</td>
+                            <td>$122.99</td>
+                            <td>
+                                <div class="flex gap-1">
+                                    <button class="btn btn-circle btn-circle-sm bg-white shadow border">-</button>
+                                    <button class="btn btn-circle btn-circle-sm bg-white shadow border">2</button>
+                                    <button class="btn btn-circle btn-circle-sm bg-white shadow border">+</button>
+                                </div>
+                            </td>
+                            <td>$245.12</td>
+                        </tr>
+                        <tr>
+                            <td><i class="feather-delete cursor-pointer"></i></td>
+                            <td><img src="assets/images/products/f2.jpg" alt="" width="30"></td>
+                            <td class="capitalize">cartoon astranaut t-shirt</td>
+                            <td>$122.99</td>
+                            <td>
+                                <div class="flex gap-1">
+                                    <button class="btn btn-circle btn-circle-sm bg-white shadow border">-</button>
+                                    <button class="btn btn-circle btn-circle-sm bg-white shadow border">1</button>
+                                    <button class="btn btn-circle btn-circle-sm bg-white shadow border">+</button>
+                                </div>
+                            </td>
+                            <td>$122.99</td>
+                        </tr>
+                        <tr>
+                            <td><i class="feather-delete cursor-pointer"></i></td>
+                            <td><img src="assets/images/products/f3.jpg" alt="" width="30"></td>
+                            <td class="capitalize">cartoon astranaut t-shirt</td>
+                            <td>$122.99</td>
+                            <td>
+                                <div class="flex gap-1">
+                                    <button class="btn btn-circle btn-circle-sm bg-white shadow border">-</button>
+                                    <button class="btn btn-circle btn-circle-sm bg-white shadow border">3</button>
+                                    <button class="btn btn-circle btn-circle-sm bg-white shadow border">+</button>
+                                </div>
+                            </td>
+                            <td>$415.12</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="coupon-subtotal">
+            <div class="flex gap-5 flex-wrap">
+                <div class="coupon">
+                    <h1 class="text-20">apply coupon</h1>
+                    <form action="" class="flex-align-center">
+                        <input type="text" name="" id="" class="form-control" placeholder="Enter your coupon...">
+                        <button class="btn btn-primary">apply</button>
+                    </form>
+                </div>
+                <div class="subtotal border p-2">
+                    <h1 class="text-20">cart totals</h1>
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td>Cart Subtotal</td>
+                                <td>$333.99</td>
+                            </tr>
+                            <tr>
+                                <td>Shipping</td>
+                                <td>Free</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h1 class="text-16">Total</h1>
+                                </td>
+                                <td>
+                                    <h1 class="text-16">$333.99</h1>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button class="btn btn-primary my-2">proceed to checkout</button>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <!-------------------------Newsletter Section------------------------------------ -->
+        <section class="newsletter my-4 py-6">
+            <div class="flex-center-between flex-wrap gap-2">
+                <div class="info text-light">
+                    <h1 class="text-md">sign up for newsletters</h1>
+                    <p>Get E-mail updates on our latest shops and <span class="warning-color">special offers</span> </p>
+                </div>
+                <form action="" class="flex-align-center">
+                    <input type="text" name="" id="" class="form-control" placeholder="Enter your email address...">
+                    <button class="btn btn-primary">sign up</button>
+                </form>
+            </div>
+        </section>
+        <!-------------------------//Newsletter Section------------------------------------ -->
+
+
+        <!-------------------------Footer------------------------------------ -->
+        <footer>
+            <div class="content p-2 rounded-sm">
+                <div class="box-container flex flex-wrap gap-3 mb-2">
+                    <div class="box">
+                        <img src="assets/images/logo.png" alt="">
+                        <h1 class="text-20 my-2">Contact</h1>
+                        <div class="links">
+                            <p><span class="text-bold"> Phone:</span><a href="tel:+256-775-358738">+256-775-358738</a>
+                                <a href="tel:+256-752-870867">+256-752-870867</a></p>
+                            <p><span class="text-bold">Email:</span> <a
+                                    href="mailto:wabwenib66@gmail.com">wabwenib66@gmail.com</a> <a
+                                    href="mailto:wabzbraize66@gmail.com">wabzbraize66@gmail.com</a></p>
+                            <p><span class="text-bold">Address:</span> <a href="#">Kampala, Uganda</a></p>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <h1 class="text-20 my-2">About</h1>
+                        <div class="links">
+                            <a href="#">about us</a>
+                            <a href="#">delivery information</a>
+                            <a href="#">privacy & policy</a>
+                            <a href="#">terms & conditions</a>
+                            <a href="#">contact us</a>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <h1 class="text-20 my-2">my account</h1>
+                        <div class="links">
+                            <a href="#">sign in</a>
+                            <a href="#">view cart</a>
+                            <a href="#">my whilist</a>
+                            <a href="#">track my order</a>
+                            <a href="#">help</a>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <h1 class="text-20 my-2">install app</h1>
+                        <div class="links">
+                            <p>From App Store or Google Play</p>
+                            <div class="flex gap-2 my-2">
+                                <a href="#"><img src="assets/images/pay/app.jpg" alt=""
+                                        class="image border rounded"></a>
+                                <a href="#"><img src="assets/images/pay/play.jpg" alt=""
+                                        class="image border rounded"></a>
+                            </div>
+                            <p>Secured Payment Gateways</p>
+                            <a href="#"><img src="assets/images/pay/pay.png" alt="" class="image mt-2"></a>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="credits">
+                    <p class="text-center pt-2">Created By <span class="primary-color">Wabweni Brian</span> | All Rights
+                        Reserved</p>
+                </div>
+
+            </div>
+        </footer>
+        <!-------------------------//Footer------------------------------------ -->
+
+
+        <script src="assets/js/main.js"></script>
+</body>
+</html>
